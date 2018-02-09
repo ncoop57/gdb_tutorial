@@ -39,7 +39,7 @@ int main(int argc, char** argv)
   /**
    * Perform the exchange based on which the original currency is.
    */
-  if (strcmp(from_currency, "USD"))
+  if (strcmp(from_currency, "USD") == 0)
   {
 
     exchangeToBitCoin(bank);

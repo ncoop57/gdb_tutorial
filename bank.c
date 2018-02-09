@@ -27,7 +27,7 @@ void exchangeToUSD(Bank* bank)
 {
 
   // Check if the bank's currency type is Bitcoin.
-  if (strcmp(bank->type, "Bitcoin"))
+  if (strcmp(bank->type, "Bitcoin") == 0)
   {
   
     bank->balance = bank->balance * BITCOIN_TO_USD; // Perform the exchange calculation from Bitcoin to USD
@@ -41,7 +41,7 @@ void exchangeToBitCoin(Bank* bank)
 {
 
   // Check if the bank's currency type is USD.
-  if (strcmp(bank->type, "USD"))
+  if (strcmp(bank->type, "USD") == 0)
   {
   
     bank->balance = bank->balance * (1 / BITCOIN_TO_USD); // Perform the exchange calculation from USD to Bitcoin
@@ -54,6 +54,6 @@ void exchangeToBitCoin(Bank* bank)
 void printBankStatement(Bank* bank)
 {
 
-  printf("Amount: %0.2f Currency: %s\n", bank->balance, bank->type);
+  printf("Amount: %0.2f Currency: %s\n\n", bank->balance, bank->type);
 
 }
