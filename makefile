@@ -1,4 +1,4 @@
-CFLAGS = -g -Wall
+CFLAGS = -Wall
 CC = gcc
 
 objs = exchanger.o bank.o
