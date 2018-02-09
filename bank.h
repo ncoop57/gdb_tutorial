@@ -17,16 +17,22 @@ typedef struct bank Bank;
 Bank* init(double amount, char* type);
 
 /**
- * Deposit a certain amount of currency into a bank
- * @param bank the bank that will receive the deposit
- * @param amount the amount that will be deposited into the bank
+ * Calculates the new balance for converting the current bank's currency to USD
+ * @param bank the bank to be converted to USD
  */
-void deposit(Bank* bank, double amount);
-
 void exchangeToUSD(Bank* bank);
 
+/**
+ * Calculates the new balance for converting the current bank's currency to
+ * Bitcoin
+ * @param bank the bank to be converted to Bitcoin
+ */
 void exchangeToBitCoin(Bank* bank);
 
+/**
+ * Prints out the bank statement for a given bank
+ * @param bank the bank to have its information printed out
+ */
 void printBankStatement(Bank* bank);
 
 #endif
